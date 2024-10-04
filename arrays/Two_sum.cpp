@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#include<unordered_map>
+#include<map>
 #include<algorithm>
 
 using namespace std;
@@ -9,14 +9,19 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& arr, int target) {
         int n = arr.size();
+        map<int , int> hashmap;
         vector<int> ans;
 
+
         for(int i=0; i<n; i++){
-            for(int j=i+1; j<n; j++){
-                if(arr[i] + arr[j] == target){
-                    ans.push_back(i);
-                    ans.push_back(j);
-                }
+            int start = arr[i];
+            int rem = target - start;
+
+            if(hashmap.find(rem) != hashmap.end()){
+                ans.push_back(i);
+                ans.push_back(hashmap[rem]);
+            }else{
+                hashmap[arr[i]] = i;
             }
         }
         return ans;
