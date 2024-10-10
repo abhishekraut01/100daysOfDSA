@@ -1,7 +1,9 @@
 #include<iostream>
+
+#include<vector>
 using namespace std;
 
-
+// https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
 // this is the bruteforce solution for this problem which takes nearly o(n3) complexity
 
 class Solution{
@@ -29,8 +31,6 @@ class Solution{
         return maxLen;
     } 
 };
-
-
 
 int main()
 {

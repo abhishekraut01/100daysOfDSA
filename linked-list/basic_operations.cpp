@@ -7,20 +7,19 @@ struct Node {
 };
 
 // Function to print linked list
-void printList(Node* n) {
-    while (n != nullptr) {
-        cout << n->data << " ";
-        n = n->next;
+void printList(Node* node){
+    while( node != nullptr){
+        cout << node->data << " ";
+        node = node->next;
     }
-    cout << endl;
 }
 
 // Insert at beginning
-void insertAtBeginning(Node** head_ref, int new_data) {
-    Node* new_node = new Node();
-    new_node->data = new_data;
-    new_node->next = *head_ref;
-    *head_ref = new_node;
+void insertAtBeginning(Node** ref_head , int newdata) {
+    Node* newNode = new Node();
+    newNode ->data = newdata;
+    newNode->next = *ref_head;
+    *ref_head = newNode;
 }
 
 // Insert at end

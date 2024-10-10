@@ -1,6 +1,9 @@
 //https://leetcode.com/problems/sort-colors/description/
 
 #include<iostream>
+#include<vector>
+#include<algorithm>
+#include<map>
 
 using namespace std;
 

@@ -1,3 +1,5 @@
+//https://www.geeksforgeeks.org/problems/pair-sum--120604/1
+
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -21,4 +23,4 @@ int main()
     cout << "Largest pair sum is: " << s.pairsum(arr) << endl;  // Output: 9
     return 0;
 }
-MinimumNumberofSwapstoMaketheStringBalanced
+
