@@ -24,22 +24,40 @@ function countNegativeNumber(arr) {
   return count;
 }
 
-
 //print the largest number in the array
 
-function printLargestElement(arr){
-    let largestElem = arr[0];
+function printLargestElement(arr) {
+  let largestElem = arr[0];
 
-    for(let i=0 ; i<arr.length; i++){
-        if(arr[i] > largestElem){
-            largestElem = arr[i];
-        }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largestElem) {
+      largestElem = arr[i];
     }
-    return largestElem;
+  }
+  return largestElem;
 }
 
+//find the second largest element in the array
 
-const arr = [1, 2, 3, 5, 3, 56, 7, 3, 50];
-const result = printLargestElement(arr, 50);
-console.log(result)
+function findSecondLargestElement(arr) {
+  const lenghtOfArr = arr.length;
+  let largestElement = -Infinity;
+  let secondLargestElement = -Infinity;
 
+  for (let i = 0; i < lenghtOfArr; i++) {
+    if (arr[i] > largestElement) {
+      secondLargestElement = largestElement;
+      largestElement = arr[i];
+    }
+
+    if (arr[i] < largestElement && arr[i] > secondLargestElement) {
+      secondLargestElement = arr[i];
+    }
+  }
+
+  return secondLargestElement === -Infinity ? null : secondLargestElement;
+}
+
+const arr = [70, 70, 70, 50];
+const result = findSecondLargestElement(arr);
+console.log(result);
