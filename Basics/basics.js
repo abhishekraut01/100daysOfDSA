@@ -23,6 +23,23 @@ function countNegativeNumber(arr) {
 
   return count;
 }
-const arr = [1,3,5,3,6,7,5,2,1,-1,-2]
-const result = countNegativeNumber(arr)
+
+
+//print the largest number in the array
+
+function printLargestElement(arr){
+    let largestElem = arr[0];
+
+    for(let i=0 ; i<arr.length; i++){
+        if(arr[i] > largestElem){
+            largestElem = arr[i];
+        }
+    }
+    return largestElem;
+}
+
+
+const arr = [1, 2, 3, 5, 3, 56, 7, 3, 50];
+const result = printLargestElement(arr, 50);
 console.log(result)
+
