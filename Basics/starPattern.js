@@ -61,4 +61,29 @@ function printFullPyramid(numberOfRows) {
   }
 }
 
-printFullPyramid(5);
+/*
+printing start pattern
+
+   1        numberOfRows 4 - i -1
+  1 2       numberOfRows 4 - 1 -1
+ 1 2 3      numberOfRows 4 - 2 -1
+1 2 3 4 
+
+*/
+
+function printNumberPyramid(numberOfRows) {
+  for (let i = 0; i < numberOfRows; i++) {
+    let temp = "";
+    for (let j = 0; j < numberOfRows - i - 1; j++) {
+      temp += " ";
+    }
+
+    for (let j = 0; j < i + 1; j++) {
+      temp += ` ${j+1}`;
+    }
+
+    console.log(temp);
+  }
+}
+
+printNumberPyramid(5)
