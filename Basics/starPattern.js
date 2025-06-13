@@ -39,6 +39,31 @@ function printHalfPyramid(numberOfRows) {
 /*
 printing start pattern
 
+      * 
+    * * 
+  * * * 
+* * * * 
+
+*/
+
+function printHalfPyrami2(numberOfRows) {
+  for (let i = 0; i < numberOfRows; i++) {
+    let temp = "";
+    for (let j = 0; j < numberOfRows - i +1; j++) {
+      temp += "  ";
+    }
+    for (let j = 0; j < i; j++) {
+      temp += ` *`;
+    }
+    console.log(temp);
+  }
+}
+
+printHalfPyrami2(5)
+
+/*
+printing start pattern
+
    *        numberOfRows 4 - i -1
   * *       numberOfRows 4 - 1 -1
  * * *      numberOfRows 4 - 2 -1
@@ -110,4 +135,3 @@ function printInvertedNumberPyramid(numberOfRows) {
   }
 }
 
-printInvertedNumberPyramid(5)
