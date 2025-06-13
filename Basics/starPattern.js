@@ -86,4 +86,28 @@ function printNumberPyramid(numberOfRows) {
   }
 }
 
-printNumberPyramid(5)
+
+/*
+printing start pattern
+
+1 2 3 4 5 
+1 2 3 4
+1 2 3
+1 2
+1
+
+*/
+
+function printInvertedNumberPyramid(numberOfRows) {
+  for (let i = 0; i < numberOfRows; i++) {
+    let temp = "";
+
+    for (let j = 0; j < numberOfRows - i; j++) {
+      temp += ` ${j+1}`;
+    }
+
+    console.log(temp);
+  }
+}
+
+printInvertedNumberPyramid(5)
