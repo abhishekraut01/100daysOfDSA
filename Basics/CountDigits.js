@@ -22,8 +22,9 @@ function CountDigit(num){
         4 % 10   remainder = 4
         }
     */
+
    let count = 0
-   let temp = num
+   let temp = Math.abs(num)
     while(temp > 0){
         temp = Math.floor(temp/10)
         count++;
