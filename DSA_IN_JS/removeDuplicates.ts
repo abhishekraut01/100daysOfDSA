@@ -29,3 +29,16 @@ function removeDuplicates(nums: number[]): number {
 };
 
 //this is more optimized way and have O(n) time complexity
+
+
+function removeDuplicatesOptimized(nums: number[]): number {
+    //and here is one of the most optimized approach two pointerrrrrr 
+    let x = 0;
+    for(let i=0; i<nums.length; i++){
+        if(nums[i] > nums[x]){
+            x++
+            nums[x] = nums[i]
+        }
+    }
+    return x+1;
+};
